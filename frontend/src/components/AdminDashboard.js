@@ -20,6 +20,7 @@ import {
   Mail,
   MapPin
 } from "lucide-react";
+import { Label } from "./ui/label";
 import { toast } from "sonner";
 import axios from "axios";
 
