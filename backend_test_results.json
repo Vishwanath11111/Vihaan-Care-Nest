@@ -1,0 +1,171 @@
+{
+  "timestamp": "2025-09-26T07:09:02.998273",
+  "base_url": "https://babynestcare.preview.emergentagent.com",
+  "summary": {
+    "total_tests": 12,
+    "passed_tests": 11,
+    "failed_tests": 1,
+    "success_rate": 91.66666666666666
+  },
+  "detailed_results": [
+    {
+      "test_name": "Root API Endpoint",
+      "success": true,
+      "details": "",
+      "response_data": {
+        "message": "Vihaan Care Nest API"
+      }
+    },
+    {
+      "test_name": "Packages Endpoint",
+      "success": true,
+      "details": "All packages with correct pricing",
+      "response_data": [
+        {
+          "id": "baby_basic",
+          "name": "Basic Baby Care",
+          "type": "baby_basic",
+          "visits_per_week": 2,
+          "price_per_month": 6000,
+          "description": "Essential care with 2 visits per week",
+          "target": "baby"
+        },
+        {
+          "id": "baby_standard",
+          "name": "Standard Baby Care",
+          "type": "baby_standard",
+          "visits_per_week": 4,
+          "price_per_month": 10000,
+          "description": "Enhanced care with 4 visits per week",
+          "target": "baby"
+        },
+        {
+          "id": "baby_premium",
+          "name": "Premium Baby Care",
+          "type": "baby_premium",
+          "visits_per_week": 7,
+          "price_per_month": 14000,
+          "description": "Complete care with daily visits",
+          "target": "baby"
+        },
+        {
+          "id": "mother_basic",
+          "name": "Basic Mother Care",
+          "type": "mother_basic",
+          "visits_per_week": 2,
+          "price_per_month": 5000,
+          "description": "Essential postpartum care with 2 visits per week",
+          "target": "mother"
+        },
+        {
+          "id": "mother_standard",
+          "name": "Standard Mother Care",
+          "type": "mother_standard",
+          "visits_per_week": 4,
+          "price_per_month": 9000,
+          "description": "Enhanced postpartum care with 4 visits per week",
+          "target": "mother"
+        },
+        {
+          "id": "mother_premium",
+          "name": "Premium Mother Care",
+          "type": "mother_premium",
+          "visits_per_week": 7,
+          "price_per_month": 12000,
+          "description": "Complete postpartum care with daily visits",
+          "target": "mother"
+        }
+      ]
+    },
+    {
+      "test_name": "Customer Registration",
+      "success": true,
+      "details": "User already exists (acceptable)",
+      "response_data": {
+        "detail": "Email already registered"
+      }
+    },
+    {
+      "test_name": "Admin Registration",
+      "success": true,
+      "details": "Admin already exists (acceptable)",
+      "response_data": {
+        "detail": "Email already registered"
+      }
+    },
+    {
+      "test_name": "Customer Login",
+      "success": true,
+      "details": "Customer login successful",
+      "response_data": {
+        "token_received": true,
+        "role": "customer"
+      }
+    },
+    {
+      "test_name": "Admin Login",
+      "success": true,
+      "details": "Admin login successful",
+      "response_data": {
+        "token_received": true,
+        "role": "admin"
+      }
+    },
+    {
+      "test_name": "Customer Profile",
+      "success": true,
+      "details": "Profile retrieved successfully",
+      "response_data": {
+        "id": "3721b347-66fb-4a0c-a58b-11ffecc0d04a",
+        "email": "customer@demo.com",
+        "full_name": "Demo Customer",
+        "phone": "9876543211",
+        "role": "customer",
+        "is_active": true,
+        "created_at": "2025-09-26T07:04:30.923000"
+      }
+    },
+    {
+      "test_name": "Location Update",
+      "success": true,
+      "details": "Location updated successfully",
+      "response_data": {
+        "message": "Location updated successfully"
+      }
+    },
+    {
+      "test_name": "Customer Subscription",
+      "success": true,
+      "details": "Subscription activated successfully",
+      "response_data": {
+        "message": "Subscription activated successfully"
+      }
+    },
+    {
+      "test_name": "Admin Dashboard",
+      "success": true,
+      "details": "Dashboard data retrieved successfully",
+      "response_data": {
+        "total_subscribers": 1,
+        "monthly_subscribers": 1,
+        "yearly_subscribers": 1,
+        "todays_appointments": 0,
+        "pending_assignments": 0
+      }
+    },
+    {
+      "test_name": "Unauthorized Access Protection",
+      "success": true,
+      "details": "Properly blocked unauthorized access",
+      "response_data": null
+    },
+    {
+      "test_name": "Invalid Login Protection",
+      "success": false,
+      "details": "Should have rejected invalid credentials",
+      "response_data": {
+        "detail": "Incorrect email or password"
+      }
+    }
+  ]
+}
